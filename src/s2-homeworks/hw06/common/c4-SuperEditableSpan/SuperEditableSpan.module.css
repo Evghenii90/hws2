@@ -1,11 +1,26 @@
 .spanBlock {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .span {
+    font-weight: 500;
+    font-size: 16px;
+    color: #0080ff;
+    cursor: pointer;
 }
 
 .input {
+    width: 276px;
+    padding: 8px 0 8px 24px;
+    border: 1px solid #CCCCCC !important; /* Серый бордер */
+    border-radius: 3px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
 }
 
 .pen {
+
 }
