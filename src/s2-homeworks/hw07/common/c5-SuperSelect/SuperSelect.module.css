@@ -1,9 +1,22 @@
 .select {
+    border: 2px solid #c2c2c2;
+    width: 165px;
+    height: 24px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
+    padding-left: 10px;
 }
 
 .select:focus {
+    outline: none;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+    background: #fff;
+    border: 1px solid #c2c2c2;
+    border-radius: 2px;
 }
 
 
 .option:hover {
+
 }
