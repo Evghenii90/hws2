@@ -1,23 +1,39 @@
 .item {
+    padding: 10px;
+    border-bottom: 1px solid #bdb7b7;
 }
 
 .item:last-of-type {
+    border-bottom: none;
 }
 
 .users {
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .buttonsContainer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
 .container {
+    max-width: 600px;
 }
 
 .thead {
+    background-color: #c6c6c6;
+    font-weight: bold;
 }
 
 .nameCol {
+    text-align: left;
+    padding: 8px;
 }
 
 .ageCol {
+    text-align: left;
+    padding: 8px;
 }
