@@ -47,7 +47,7 @@ function Clock() {
         day: '2-digit',
         month: '2-digit',
         year: 'numeric',
-    })
+    }).replace(/\//g, '.')
 
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
     // const stringDay = 'date->day' || <br/> // пишут студенты
