@@ -1,5 +1,16 @@
 const initState = {
-    themeId: 1 as ThemeIdType,
+    themeId: "1" as ThemeIdType,
+}
+
+export type ThemeIdType = "1"|"2"|"3"
+
+export type ThemeStateType = {
+    themeId: ThemeIdType,
+}
+
+export type ChangeThemeIdActionType = {
+    type: 'SET_THEME_ID',
+    id: ThemeIdType
 }
 
 export const themeReducer = (state = initState, action: ChangeThemeIdActionType): ThemeStateType => { // fix any
@@ -17,11 +28,3 @@ export const themeReducer = (state = initState, action: ChangeThemeIdActionType)
 
 export const changeThemeId = (id: ThemeIdType): ChangeThemeIdActionType => ({ type: 'SET_THEME_ID', id }) // fix any
 
-export type ThemeIdType = 1|2|3
-export type ThemeStateType = {
-    themeId: ThemeIdType,
-}
-export type ChangeThemeIdActionType = {
-    type: string,
-    id: ThemeIdType
-}
