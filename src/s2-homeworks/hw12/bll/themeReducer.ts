@@ -2,7 +2,7 @@ const initState = {
     themeId: 1,
 }
 
-export const themeReducer = (state = initState, action: ActionType): ThemeType => { // fix any
+export const themeReducer = (state = initState, action: ChangeThemeIdActionType): ThemeType => { // fix any
     switch (action.type) {
         // дописать
             case 'SET_THEME_ID':
@@ -15,12 +15,12 @@ export const themeReducer = (state = initState, action: ActionType): ThemeType =
     }
 }
 
-export const changeThemeId = (id: number): ActionType => ({ type: 'SET_THEME_ID', id }) // fix any
+export const changeThemeId = (id: number): ChangeThemeIdActionType => ({ type: 'SET_THEME_ID', id }) // fix any
 
-type ThemeType = {
+export type ThemeType = {
     themeId: number,
 }
-type ActionType = {
-    type: 'SET_THEME_ID',
+export type ChangeThemeIdActionType = {
+    type: string,
     id: number
 }
