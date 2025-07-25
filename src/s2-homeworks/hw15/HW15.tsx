@@ -52,35 +52,50 @@ const HW15 = () => {
         getTechs(params)
             .then((res) => {
                 // делает студент
-
                 // сохранить пришедшие данные
-
-                //
+                if (res && res.data) {
+                    setTechs(res.data.techs)
+                    setTotalCount(res.data.totalCount)
+                }
+                setLoading(false)
             })
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
-        // делает студент
+        setPage(newPage)
+        setCount(newCount)
 
+        const newParams = {
+            sort,
+            page: newPage.toString(),
+            count: newCount.toString()
+        }
+
+        sendQuery(newParams)
+        setSearchParams(newParams)
+        // делает студент
         // setPage(
         // setCount(
-
         // sendQuery(
         // setSearchParams(
-
-        //
     }
 
     const onChangeSort = (newSort: string) => {
-        // делает студент
+        setSort(newSort)
+        setPage(1)
 
+        const newParams = {
+            sort: newSort,
+            page: '1',
+            count: count.toString()
+        }
+        sendQuery(newParams)
+        setSearchParams(newParams)
+        // делает студент
         // setSort(
         // setPage(1) // при сортировке сбрасывать на 1 страницу
-
         // sendQuery(
         // setSearchParams(
-
-        //
     }
 
     useEffect(() => {
